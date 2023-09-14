@@ -1,0 +1,17 @@
+{
+  "name": "Password Generator",
+  "short_name": "Pass Gen",
+  "theme_color": "#6cb958",
+  "background_color": "#6cb958",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "description": "Generate a random password with World is Awesome .fun | Password Generator! Choose between strong or easy password, with letters or with number, with special characters or with all preferences together",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/images/logo_icon.png",
+      "sizes": "512x512"
+    }
+  ]
+}

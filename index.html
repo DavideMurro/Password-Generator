@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#6cb958">
+
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="mask-icon" href="http://passwordgenerator.worldisawesome.fun/images/logo_icon.svg" color="#6cb958">
+    <link rel="icon" type="image/svg+xml" href="http://passwordgenerator.worldisawesome.fun/images/logo_icon.svg">
+    <link rel="alternate icon" type="image/png" href="http://passwordgenerator.worldisawesome.fun/images/logo_icon.png">
+
+    <title>Password Generator | World is Awesome .fun</title>
+    <meta name="description"
+        content="Generate a random password with World is Awesome .fun | Password Generator! Choose between strong or easy password, with letters, numbers or special characters. Create your own secure password" />
+    <meta name="keywords"
+        content="password, generate, random, password generator, World is Awesome, World is Awesome .fun, World, Awesome, fun, wia, wia.fun, wia fun">
+    <meta name="author" content="World is Awesome .fun">
+    <meta name="language" content="ES">
+
+    <!-- external -->
+    <link rel="manifest" href="site.webmanifest">
+    <link href="lib/font_nunito/Nunito.css" rel="stylesheet">
+
+    <!-- internal -->
+    <link rel="stylesheet" href="css/style_material.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <header>
+        <h4 class="mb-0">Powered by</h4>
+        <a href="https://www.worldisawesome.fun/" title="World is Awesome .fun" id="home-logo">
+            <img src="images/wia_logo_icon_text.svg" alt="logo" title="World is Awesome .fun" class="icon theme-light" />
+            <img src="images/wia_logo_icon_text_light.svg" alt="logo" title="World is Awesome .fun" class="icon theme-dark" />
+        </a>
+    </header>
+
+    <div class="article-container" id="passwordgenerator-form-popup">
+        <form class="article small" id="passwordgenerator-form" method="post" onsubmit="generatePassword(); return false;">
+            <div class="article-header d-flex align-items">
+                <img src="images/logo_icon.svg" title="Password generator logo" class="article-icon" alt="logo">
+                <h2 class="flex-auto article-title">Password Generator!</h2>
+            </div>
+            <div class="article-body">
+                <small class="article-description">Generate an easy or strong random password</small>
+
+                <small id="passwordgenerator-error" class="d-block error-color"></small>
+
+                
+                <div class="input-container d-flex align-items" id="is-use-letters-container">
+                    <input type="checkbox" placeholder="Use letters" id="is-use-letters" class="checkbox mr-05" checked onchange="useLettersChanged()" />
+                    <label for="is-use-letters">Use letters</label>
+                </div>
+                <div class="mb-1 ml-1" id="use-letters-type-container">
+                    <div class="input-container d-flex align-items" id="is-use-letters-lowercase-container">
+                        <input type="radio" placeholder="Lowercase" name="use-letters-type" id="is-use-letters-lowercase" class="radio mr-05" />
+                        <label for="is-use-letters-lowercase">Only lower case (e.g. abcdefg)</label>
+                    </div>
+                    <div class="input-container d-flex align-items" id="is-use-letters-uppercase-container">
+                        <input type="radio" placeholder="Uppercase" name="use-letters-type" id="is-use-letters-uppercase" class="radio mr-05" />
+                        <label for="is-use-letters-uppercase">Only upper case (e.g. ABCDEFG)</label>
+                    </div>
+                    <div class="input-container d-flex align-items" id="is-use-letters-bothcase-container">
+                        <input type="radio" placeholder="Both case" name="use-letters-type" id="is-use-letters-bothcase" class="radio mr-05" checked />
+                        <label for="is-use-letters-bothcase">Both case (e.g. aBcDEfg)</label>
+                    </div>
+                </div>
+                <div class="input-container d-flex align-items" id="is-use-numbers-container">
+                    <input type="checkbox" placeholder="Use numbers" id="is-use-numbers" class="checkbox mr-05" />
+                    <label for="is-use-numbers">Use numbers (e.g. 12345)</label>
+                </div>
+                <div class="input-container d-flex align-items" id="is-use-special-characters-container">
+                    <input type="checkbox" placeholder="Use special characters" id="is-use-special-characters" class="checkbox mr-05" />
+                    <label for="is-use-special-characters">Use special characters (e.g. @#$%)</label>
+                </div>
+
+                <hr class="divider-horizontal">
+
+                <small class="article-description">
+                    <label for="password-length-view" class="label d-flex align-items">
+                        <span class="flex-auto">Choose password length</span>
+                        <b id="password-min-max-length"></b>
+                    </label>
+                </small>
+
+                <div class="input-container" id="use-length-container">
+                    <div class="d-flex align-items" id="password-length-container">
+                        <input type="number" id="password-length-view" class="input" style="width: 6em;" onfocus="this.select()" onchange="passwordLengthViewChanged()" />
+                        <span class="m-05"></span>
+                        <div class="w-100-p">
+                            <label for="password-length" class="label d-none">Password length</label>
+                            <input type="range" id="password-length" class="range flex-auto" onchange="passwordLengthChanged()" oninput="passwordLengthChanged()"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-container d-flex align-items justify-content-right" id="is-use-random-length-container">
+                    <label for="is-use-random-length">Or use random length</label>
+                    <input type="checkbox" placeholder="Use random length" id="is-use-random-length" class="checkbox ml-05" onchange="useRandomLengthChanged()" />
+                </div>
+            </div>
+            <div class="article-footer d-flex align-items">
+                <button type="submit" class="button success">Generate</button>
+
+                <span class="m-05"></span>
+
+                <div class="input-container" id="password-generated-container">
+                    <label for="password-generated" class="label d-none">Password generated</label>
+                    <input type="text" placeholder="Password generated" id="password-generated" class="input" onfocus="this.select()"/>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <div>v. <b id="app-version">1.0.1</b></div>
+    </footer>
+</body>
+
+</html>
