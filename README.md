@@ -28,6 +28,6 @@ https://davidemurro.github.io/Password-Generator/
 
 ## Screenshots
 
-![tablet1](https://github.com/DavideMurro/Password-Generator/assets/118051417/e842af43-4bb1-470d-b969-1a7eb34c3f57)
-![mobile1](https://github.com/DavideMurro/Password-Generator/assets/118051417/e3fb93b5-9f75-40b6-aa26-93874453dd98)
+![davidemurro github io_Password-Generator_](https://github.com/DavideMurro/Password-Generator/assets/118051417/e842af43-4bb1-470d-b969-1a7eb34c3f57)
+![davidemurro github io_Password-Generator_mobile](https://github.com/DavideMurro/Password-Generator/assets/118051417/f4b223b9-cd60-47bf-9da4-9101d45d0442)
 
