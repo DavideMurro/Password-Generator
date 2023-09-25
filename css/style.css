@@ -17,48 +17,6 @@ body {
 	transition: background 0.2s;
 }
 
-body #morningnight-background {
-	z-index: -1;
-	position: fixed;
-	top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-body.morning {
-	background-color: #accdee;
-	/* per bug safari */
-	background-image: linear-gradient(#accdee, #accdee);
-}
-body.morning #morningnight-background {
-	background-image: url(/images/backgrounds/clouds.png);
-    background-size: auto 70%;
-    background-position: center;
-	animation: backgroundmove 10s infinite alternate ease-in-out;
-}
-body.evening {
-	background-color: #e94e1b;
-	color: #dedede;
-	background-image: linear-gradient(#893665 15%, #e94e1b);
-    background-repeat: no-repeat;
-}
-body.evening #morningnight-background {
-	background-image: url(/images/backgrounds/evening.png);
-    background-size: cover;
-}
-body.night {
-	background-color: #28274f;
-	/* per bug safari */
-	background-image: linear-gradient(#28274f, #28274f);
-	color: #dedede;
-}
-body.night #morningnight-background {
-	background-image: url(/images/backgrounds/stars.gif);
-    background-size: contain;
-    background-position: center;
-	/*animation: backgroundzoom 3s infinite alternate ease-in-out;*/
-}
-
 /* IS HOME */
 body.home .home-hide {
 	display: none !important;
