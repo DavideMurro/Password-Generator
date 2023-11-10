@@ -24,10 +24,9 @@ The page is simply divided in:
 
 ## Demo link
 
-https://davidemurro.github.io/Password-Generator/
+https://davide-murro.github.io/password-generator/
 
 ## Screenshots
 
 ![davidemurro github io_Password-Generator_](https://github.com/DavideMurro/Password-Generator/assets/118051417/e842af43-4bb1-470d-b969-1a7eb34c3f57)
 ![davidemurro github io_Password-Generator_mobile](https://github.com/DavideMurro/Password-Generator/assets/118051417/f4b223b9-cd60-47bf-9da4-9101d45d0442)
-
